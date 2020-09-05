@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\Console\Command;
+namespace Migrify\SnifferFixerToECS\Command;
 
 use Migrify\NeonToYaml\Exception\NotImplementedYetException;
 use Migrify\SnifferFixerToECS\FixerToECSConverter;
