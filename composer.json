@@ -1,0 +1,36 @@
+{
+    "name": "migrify/sniffer-fixer-to-ecs",
+    "description": "Switch PHP_CodeSniffer or PHP-CS-Fixer to ECS with Single Command",
+    "license": "MIT",
+    "bin": [
+        "bin/sniffer-fixer-to-ecs"
+    ],
+    "require": {
+        "php": ">=7.2",
+        "ext-simplexml": "*",
+        "nette/utils": "^3.1",
+        "symfony/dependency-injection": "^4.4|^5.1",
+        "symfony/console": "^4.4|^5.1",
+        "symfony/http-kernel": "^4.4|^5.1",
+        "migrify/php-config-printer": "^0.4",
+        "squizlabs/php_codesniffer": "^3.5.6",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "migrify/migrify-kernel": "^0.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Migrify\\SnifferFixerToECS\\": "src"
+        },
+        "files": [
+            "stubs/Sniff.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Migrify\\SnifferFixerToECS\\Tests\\": "tests"
+        }
+    }
+}
