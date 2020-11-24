@@ -2,21 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\Command;
+namespace Symplify\SnifferFixerToECSConverter\Command;
 
-use Migrify\MigrifyKernel\Command\AbstractMigrifyCommand;
 use Migrify\MigrifyKernel\Exception\NotImplementedYetException;
 use Migrify\MigrifyKernel\ValueObject\MigrifyOption;
-use Migrify\SnifferFixerToECS\FixerToECSConverter;
-use Migrify\SnifferFixerToECS\SnifferToECSConverter;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symplify\PackageBuilder\Console\Command\AbstractSymplifyCommand;
 use Symplify\PackageBuilder\Console\ShellCode;
 use Symplify\SmartFileSystem\Exception\FileNotFoundException;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\SnifferFixerToECSConverter\FixerToECSConverter;
+use Symplify\SnifferFixerToECSConverter\SnifferToECSConverter;
 
-final class ConvertCommand extends AbstractMigrifyCommand
+final class ConvertCommand extends AbstractSymplifyCommand
 {
     /**
      * @var SnifferToECSConverter

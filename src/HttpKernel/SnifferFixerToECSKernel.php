@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\HttpKernel;
+namespace Symplify\SnifferFixerToECSConverter\HttpKernel;
 
-use Migrify\MigrifyKernel\Bundle\MigrifyKernelBundle;
-use Migrify\MigrifyKernel\HttpKernel\AbstractMigrifyKernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 use Symfony\Component\HttpKernel\Bundle\BundleInterface;
 use Symplify\PhpConfigPrinter\Bundle\PhpConfigPrinterBundle;
+use Symplify\SymplifyKernel\Bundle\SymplifyKernelBundle;
+use Symplify\SymplifyKernel\HttpKernel\AbstractSymplifyKernel;
 
-final class SnifferFixerToECSKernel extends AbstractMigrifyKernel
+final class SnifferFixerToECSKernel extends AbstractSymplifyKernel
 {
     public function registerContainerConfiguration(LoaderInterface $loader): void
     {
@@ -22,6 +22,6 @@ final class SnifferFixerToECSKernel extends AbstractMigrifyKernel
      */
     public function registerBundles(): iterable
     {
-        return [new PhpConfigPrinterBundle(), new MigrifyKernelBundle()];
+        return [new PhpConfigPrinterBundle(), new SymplifyKernelBundle()];
     }
 }

@@ -12,6 +12,6 @@ return static function (ContainerConfigurator $containerConfigurator): void {
         ->autowire()
         ->autoconfigure();
 
-    $services->load('Migrify\SnifferFixerToECS\\', __DIR__ . '/../src')
+    $services->load('Symplify\SnifferFixerToECSConverter\\', __DIR__ . '/../src')
         ->exclude([__DIR__ . '/../src/HttpKernel']);
 };

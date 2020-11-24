@@ -28,7 +28,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
 
     $parameters = $containerConfigurator->parameters();
 
-    $parameters->set(Option::PATHS, ['%semporary-packages']);
+    $parameters->set(Option::PATHS, ['/tmp/_temp_fixture_easy_testing/temporary-packages']);
 
     $parameters->set(Option::EXCLUDE_PATHS, ['tests/Fixtures']);
 };

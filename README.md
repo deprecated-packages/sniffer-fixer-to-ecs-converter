@@ -1,6 +1,6 @@
 # Switch PHP_CodeSniffer or PHP-CS-Fixer to ECS with Single Command
 
-[![Downloads total](https://img.shields.io/packagist/dt/migrify/sniffer-fixer-to-ecs.svg?style=flat-square)](https://packagist.org/packages/migrify/sniffer-fixer-to-ecs/stats)
+[![Downloads total](https://img.shields.io/packagist/dt/symplify/sniffer-fixer-to-ecs-converter.svg?style=flat-square)](https://packagist.org/packages/symplify/sniffer-fixer-to-ecs-converter/stats)
 
 - From `phpcs.xml` to `ecs.php`?
 - From `.php_cs.dist` to `ecs.php`?
@@ -15,21 +15,23 @@ Based on:
 ## Install
 
 ```bash
-composer require migrify/sniffer-fixer-to-ecs --dev
+composer require symplify/sniffer-fixer-to-ecs-converter --dev
 ```
 
 ## Usage
 
 ```bash
-vendor/bin/sniffer-fixer-to-ecs convert phpcs.xml
+vendor/bin/sniffer-fixer-to-ecs-converter convert phpcs.xml
 ```
 
 That's it :)
 
+<br>
+
 ## Report Issues
 
-In case you are experiencing a bug or want to request a new feature head over to the [migrify monorepo issue tracker](https://github.com/migrify/migrify/issues)
+In case you are experiencing a bug or want to request a new feature head over to the [Symplify monorepo issue tracker](https://github.com/symplify/symplify/issues)
 
 ## Contribute
 
-The sources of this package are contained in the migrify monorepo. We welcome contributions for this package on [migrify/migrify](https://github.com/migrify/migrify).
+The sources of this package are contained in the Symplify monorepo. We welcome contributions for this package on [symplify/symplify](https://github.com/symplify/symplify).

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Migrify\MigrifyKernel\Bootstrap\KernelBootAndApplicationRun;
-use Migrify\SnifferFixerToECS\HttpKernel\SnifferFixerToECSKernel;
+use Symplify\SnifferFixerToECSConverter\HttpKernel\SnifferFixerToECSKernel;
+use Symplify\SymplifyKernel\ValueObject\KernelBootAndApplicationRun;
 
 $possibleAutoloadPaths = [
     // after split package

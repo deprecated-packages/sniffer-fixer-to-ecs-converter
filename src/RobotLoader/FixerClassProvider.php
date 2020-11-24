@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\RobotLoader;
+namespace Symplify\SnifferFixerToECSConverter\RobotLoader;
 
 use Nette\Loaders\RobotLoader;
 

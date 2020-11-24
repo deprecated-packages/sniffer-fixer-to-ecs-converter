@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\Tests\SnifferToECSConverter;
+namespace Symplify\SnifferFixerToECSConverter\Tests\SnifferToECSConverter;
 
 use Iterator;
-use Migrify\SnifferFixerToECS\HttpKernel\SnifferFixerToECSKernel;
-use Migrify\SnifferFixerToECS\SnifferToECSConverter;
 use Symplify\EasyTesting\DataProvider\StaticFixtureFinder;
 use Symplify\EasyTesting\DataProvider\StaticFixtureUpdater;
 use Symplify\EasyTesting\StaticFixtureSplitter;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\SnifferFixerToECSConverter\HttpKernel\SnifferFixerToECSKernel;
+use Symplify\SnifferFixerToECSConverter\SnifferToECSConverter;
 
 final class SnifferToECSConverterTest extends AbstractKernelTestCase
 {
@@ -44,8 +44,7 @@ final class SnifferToECSConverterTest extends AbstractKernelTestCase
         );
 
         $this->assertSame(
-            $inputAndExpectedFileInfo->getExpectedFileInfo()
-                ->getContents(),
+            $inputAndExpectedFileInfo->getExpectedFileContent(),
             $convertedContent,
             $fixtureFileInfo->getRelativeFilePathFromCwd()
         );

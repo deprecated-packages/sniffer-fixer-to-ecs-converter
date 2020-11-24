@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS\Tests\FixerToECSConverter;
+namespace Symplify\SnifferFixerToECSConverter\Tests\FixerToECSConverter;
 
 use Iterator;
-use Migrify\SnifferFixerToECS\FixerToECSConverter;
-use Migrify\SnifferFixerToECS\HttpKernel\SnifferFixerToECSKernel;
 use Symplify\EasyTesting\DataProvider\StaticFixtureFinder;
 use Symplify\EasyTesting\DataProvider\StaticFixtureUpdater;
 use Symplify\EasyTesting\StaticFixtureSplitter;
 use Symplify\PackageBuilder\Testing\AbstractKernelTestCase;
 use Symplify\SmartFileSystem\SmartFileInfo;
 use Symplify\SmartFileSystem\SmartFileSystem;
+use Symplify\SnifferFixerToECSConverter\FixerToECSConverter;
+use Symplify\SnifferFixerToECSConverter\HttpKernel\SnifferFixerToECSKernel;
 
 final class FixerToECSConverterTest extends AbstractKernelTestCase
 {

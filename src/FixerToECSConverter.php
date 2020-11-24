@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS;
+namespace Symplify\SnifferFixerToECSConverter;
 
 use Migrify\MigrifyKernel\Exception\ShouldNotHappenException;
-use Migrify\SnifferFixerToECS\RobotLoader\FixerClassProvider;
 use Nette\Utils\Strings;
 use PhpCsFixer\Config;
 use Symplify\PackageBuilder\Reflection\PrivatesAccessor;
 use Symplify\PhpConfigPrinter\YamlToPhpConverter;
 use Symplify\SmartFileSystem\SmartFileInfo;
+use Symplify\SnifferFixerToECSConverter\RobotLoader\FixerClassProvider;
 
 /**
- * @see \Migrify\SnifferFixerToECS\Tests\FixerToECSConverter\FixerToECSConverterTest
+ * @see \Symplify\SnifferFixerToECSConverter\Tests\FixerToECSConverter\FixerToECSConverterTest
  */
 final class FixerToECSConverter
 {
@@ -110,6 +110,9 @@ final class FixerToECSConverter
         return implode('', $ruleClassParts);
     }
 
+    /**
+     * @return mixed[]
+     */
     private function collectFixerClasses(Config $config): array
     {
         $fixerClasses = [];
@@ -122,6 +125,7 @@ final class FixerToECSConverter
                 'calls' => [['configure', [$ruleConfiguration]]],
             ] : null;
         }
+
         return $fixerClasses;
     }
 

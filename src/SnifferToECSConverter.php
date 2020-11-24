@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS;
+namespace Symplify\SnifferFixerToECSConverter;
 
 use SimpleXMLElement;
 use Symplify\EasyCodingStandard\Configuration\Option;
@@ -10,7 +10,7 @@ use Symplify\PhpConfigPrinter\YamlToPhpConverter;
 use Symplify\SmartFileSystem\SmartFileInfo;
 
 /**
- * @see \Migrify\SnifferFixerToECS\Tests\SnifferToECSConverter\SnifferToECSConverterTest
+ * @see \Symplify\SnifferFixerToECSConverter\Tests\SnifferToECSConverter\SnifferToECSConverterTest
  */
 final class SnifferToECSConverter
 {
@@ -188,14 +188,7 @@ final class SnifferToECSConverter
         foreach ($child->properties as $properties) {
             foreach ($properties as $property) {
                 $name = (string) $property->attributes()['name'];
-                $value = (string) $property->attributes()['value'];
-
-                // retype
-                if (strlen((string) (int) $value) === strlen($value)) {
-                    $value = (int) $value;
-                }
-
-                $serviceConfiguration[$name] = $value;
+                $serviceConfiguration[$name] = $this->resolvePropertyValue($property);
             }
         }
 
@@ -204,5 +197,16 @@ final class SnifferToECSConverter
         }
 
         return $serviceConfiguration;
+    }
+
+    private function resolvePropertyValue($property)
+    {
+        $value = (string) $property->attributes()['value'];
+
+        // retype
+        if (strlen((string) (int) $value) === strlen($value)) {
+            $value = (int) $value;
+        }
+        return $value;
     }
 }

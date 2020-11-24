@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Migrify\SnifferFixerToECS;
+namespace Symplify\SnifferFixerToECSConverter;
 
 use Symplify\EasyCodingStandard\Configuration\Option;
 use Symplify\EasyCodingStandard\ValueObject\Set\SetList;
