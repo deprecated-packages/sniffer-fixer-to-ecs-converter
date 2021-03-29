@@ -23,7 +23,7 @@ final class FixerClassProvider
         }
 
         $robotLoader = new RobotLoader();
-        $robotLoader->addDirectory(__DIR__ . '/../../../../vendor/friendsofphp/php-cs-fixer/src');
+        $robotLoader->addDirectory(__DIR__ . '/../../../../friendsofphp/php-cs-fixer/src');
 
         $robotLoader->acceptFiles = ['*Fixer.php'];
         $robotLoader->rebuild();
